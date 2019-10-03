@@ -1,6 +1,18 @@
 body {
   font-family: 'Josefin Sans', 'Reem Kufi', sans-serif; }
 
+.active {
+  padding: 10px 0 10px 0;
+  background-color: #c49e85;
+  transition: padding 0.8s;
+  -webkit-box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3); }
+  .active .menu .menu-item a,
+  .active .logo h3 {
+    color: #14110f;
+    font-weight: 800; }
+
 header {
   padding: 20px 0 20px 0;
   background-color: rgba(20, 17, 15, 0.3);
@@ -8,7 +20,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999; }
+  z-index: 9999;
+  transition: padding 0.6s; }
   header .logo h3 {
     margin: 0;
     line-height: 1.7;
@@ -91,7 +104,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #c49e85 5%, #fff 100%);
+    background: linear-gradient(to right, #c49e85 100%, #fff 100%);
     border-radius: 30px; }
   .about-me-box .personal-info {
     position: relative;
