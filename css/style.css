@@ -1,15 +1,19 @@
 body {
   font-family: 'Josefin Sans', 'Reem Kufi', sans-serif; }
 
-.active {
+.scroll-hide-menu {
+  top: -100px;
+  transition: top 0.8s; }
+
+.scroll-show-menu {
   padding: 10px 0 10px 0;
   background-color: #c49e85;
-  transition: padding 0.8s;
+  transition: padding 0.8s, top 0.8s;
   -webkit-box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3); }
-  .active .menu .menu-item a,
-  .active .logo h3 {
+  .scroll-show-menu .menu .menu-item a,
+  .scroll-show-menu .logo h3 {
     color: #14110f;
     font-weight: 800; }
 
@@ -21,7 +25,7 @@ header {
   left: 0;
   right: 0;
   z-index: 9999;
-  transition: padding 0.6s; }
+  transition: all 0.8s; }
   header .logo h3 {
     margin: 0;
     line-height: 1.7;
