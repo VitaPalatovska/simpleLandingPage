@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: 'Josefin Sans', 'Reem Kufi', sans-serif; }
 
@@ -8,7 +11,7 @@ body {
 .scroll-show-menu {
   padding: 10px 0 10px 0;
   background-color: #c49e85;
-  transition: padding 0.8s, top 0.8s;
+  transition: top 0.8s;
   -webkit-box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 2px 27px 8px rgba(0, 0, 0, 0.3); }
@@ -16,6 +19,15 @@ body {
   .scroll-show-menu .logo h3 {
     color: #14110f;
     font-weight: 800; }
+  .scroll-show-menu .active-menu {
+    border-radius: 10px;
+    border-bottom: 3px double #14110f;
+    border-top: 3px double #14110f; }
+
+.active-menu {
+  border-radius: 10px;
+  border-bottom: 4px double #c49e85;
+  border-top: 4px double #c49e85; }
 
 header {
   padding: 20px 0 20px 0;
@@ -39,12 +51,15 @@ header {
     header .menu .menu-item {
       display: inline-block;
       margin-left: 30px;
-      line-height: 2.8; }
+      line-height: 2;
+      padding: 3px 8px; }
       header .menu .menu-item a {
         color: #f1e3d3;
         font-weight: 700;
         font-family: 'Josefin Sans', 'Reem Kufi', sans-serif;
         letter-spacing: 2px; }
+      header .menu .menu-item a:hover {
+        text-decoration: none; }
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);

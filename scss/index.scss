@@ -1,7 +1,10 @@
 @import 'colors.scss';
 @import 'mixins.scss';
 
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
     font-family: 'Josefin Sans', 'Reem Kufi', sans-serif;
     //position: relative;
@@ -18,7 +21,7 @@ body{
 .scroll-show-menu{
     padding: 10px 0 10px 0;
     background-color: $accent;
-    transition: padding 0.8s, top 0.8s;
+    transition: top 0.8s;
     @include basic-box-shadow;
 
     .menu .menu-item a, 
@@ -26,7 +29,21 @@ body{
         color: $primary-dark;
         font-weight: 800;
     }
+
+    .active-menu{
+        border-radius: 10px;
+        border-bottom: 3px double $primary-dark;
+        border-top: 3px double $primary-dark;
+    }
 }
+
+.active-menu{
+    border-radius: 10px;
+    border-bottom: 4px double $accent;
+    border-top: 4px double $accent;
+}
+
+
 
 
 header{
@@ -38,7 +55,6 @@ header{
     right: 0;
     z-index: 9999;
     transition: all 0.8s;
-    //transition: top 0.8s;
 
     
 
@@ -61,8 +77,8 @@ header{
         .menu-item{
             display: inline-block;
             margin-left: 30px;
-            line-height: 2.8;
-            
+            line-height: 2;
+            padding: 3px 8px;
     
             a{
                 color: $basic-light;
@@ -70,7 +86,15 @@ header{
                 font-family: 'Josefin Sans', 'Reem Kufi', sans-serif;
                 letter-spacing: 2px;
             }
+
+            a:hover{
+        
+                text-decoration: none;
+            
             }
+            }
+
+        
     
     }
    

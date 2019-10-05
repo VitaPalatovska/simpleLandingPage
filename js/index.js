@@ -41,3 +41,23 @@
 })
 
 }());
+
+
+//Change Navbar Item
+
+let itemMenu = $('.menu-item');
+let menu = $('.menu');
+function changeMenuItem(){
+    
+    itemMenu.click(
+    function(){
+        
+        itemMenu.removeClass('active-menu');
+        $(this).addClass('active-menu');
+    }
+    )
+}
+
+changeMenuItem();
+
+console.log(itemMenu);
